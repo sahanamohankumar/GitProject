@@ -27,8 +27,11 @@ public class Main {
                 e.printStackTrace();
             }
         }
+        int Total = 0;
         for (int i = 0; i < threadCount; i++) {
-            System.out.println("Total from thread " + i + ": " + totals[i]);
+            Total += totals[i];
         }
+
+        System.out.println("Total of all thread sums: " + Total);
     }
 }
