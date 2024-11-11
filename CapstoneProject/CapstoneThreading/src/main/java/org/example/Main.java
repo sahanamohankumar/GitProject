@@ -20,9 +20,9 @@ public class Main {
             });
             threads[i].start();
         }
-        for (Thread thread : threads) {
+        for (int i = 0; i < threadCount; i++) {
             try {
-                thread.join();
+                threads[i].join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
