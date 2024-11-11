@@ -9,6 +9,9 @@ public class Main {
             threads[i] = new Thread(new Runnable() {
                 @Override
                 public void run() {
+                    int sum = 0;
+                    for(int j=1; j<=1000; j++)
+                        sum += j;
                     System.out.println("Thread " + Thread.currentThread().getId() + " is running.");
                 }
             });
