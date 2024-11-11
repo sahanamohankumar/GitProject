@@ -5,6 +5,7 @@ public class Main {
         int threadCount = 1000;
         Thread[] threads = new Thread[threadCount];
         int[] totals = new int[threadCount];
+        long startTime = System.currentTimeMillis();
 
         for (int i = 0; i < threadCount; i++) {
             final int index =i;
@@ -31,6 +32,11 @@ public class Main {
         for (int i = 0; i < threadCount; i++) {
             Total += totals[i];
         }
+        long endTime = System.currentTimeMillis();
+        long duration = endTime - startTime;
+
+        System.out.println("Total of all thread sums: " + Total);
+        System.out.println("Program execution time: " + duration + " milliseconds");
 
         System.out.println("Total of all thread sums: " + Total);
     }
